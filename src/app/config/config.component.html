@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="panel panel-primary">
+    <div class="panel-heading">All lamps status</div>
+    <div class="panel-body">
+      <button (click)=onClick()>GET</button>
+      <div *ngFor="let light of lights; let num =index">
+        Lamp {{num + 1}} => on:{{light.state.on}}, xy:{{light.state.xy}}
+      </div>              
+    </div>
+  
+  </div>
+</div>
+
+
+

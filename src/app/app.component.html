@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row text-center">
+      <h3>Hue lamp control</h3>
+    </div>
+</div>
+<div class="container containerTwo">
+    <app-config>
+    </app-config>
+    <div *ngFor="let light of lights; let num =index" class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Lamp {{num+1}} (name = {{light.name}}) control</div>
+            <div class="panel-body">
+                <app-light-switch [isLampOn]="light.state.on" [lampnummer]="num+1">
+                </app-light-switch>
+                <app-light-color [lampnummer]="num+1"></app-light-color>       
+            </div>
+        </div>        
+    </div>  
+             
+</div>

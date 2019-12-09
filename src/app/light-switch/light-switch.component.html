@@ -1,0 +1,17 @@
+<div class="btn-group" role="group">
+    <div *ngIf="isOffActive; else elseBlockOff">
+        <button name="btnOff" type="button" id="off" class="btn btn-primary off">Off</button>
+    </div>
+    <ng-template #elseBlockOff>
+        <button name="btnOff" type="button" id="off" class="btn btn-secondary off" (click)="BtnOffclicked($event)">Off</button>
+    </ng-template>
+
+    <div *ngIf="isOnActive; else elseBlockOn">
+        <button name="btnOn" type="button" id="on" class="btn btn-primary on">On</button>
+    </div>
+    <ng-template #elseBlockOn>
+        <button name="btnOn" type="button" id="on" class="btn btn-secondary on" (click)="BtnOnclicked($event)">On</button>
+    </ng-template>
+
+</div>
+

@@ -1,0 +1,15 @@
+<div class="slidecontainer">
+    <div class="form-group">
+        <label>R:</label>
+        <input type="range" min="0" max="255" value="{{redPart}}" (change)="onchange($event)" class="slider" id="redRange">
+    </div>
+    <div class="form-group">
+        <label>G:</label>
+        <input type="range" min="0" max="255" value="{{greenPart}}" (change)="onchange($event)" class="slider" id="greenRange">
+    </div>  
+    <div class="form-group">
+        <label>B:</label>    
+        <input type="range" min="0" max="255" value="{{bluePart}}" (change)="onchange($event)" class="slider" id="blueRange">
+    </div>    
+</div>
+
